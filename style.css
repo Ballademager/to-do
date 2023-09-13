@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding-top: 5rem;
+  padding-left: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  background-color: lightgoldenrodyellow;
+  margin-block: 1rem;
+  padding-block: 1rem;
+}
+
+li {
+  display: flex;
+  border-bottom: 1px groove rgb(109, 109, 109);
+  gap: 1rem;
+}
+.deleteMe {
+  background-color: red;
+  height: 10px;
+  width: 10px;
+  align-self: center;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
