@@ -9,22 +9,72 @@
     <title>TO-DO</title>
 </head>
 
-<body>
-    <p id="testfield">opgave her</p>
-    <ul id="theList">
-        <li><span>testelement</span><input id="${inputValue}" type="checkbox">
-            <div class="deleteMe"></div>
-        </li>
-    </ul>
-    <form id="inputForm" action="">
+<body data-theme="">
+
+    <main>
+        <div class="flex">
+            <h1>My To-Do List</h1>
+            <select name="color" id="theme-select">
+                <option value="classic">Classic</option>
+                <option value="blue">Blue</option>
+                <option value="dust">Dust</option>
+                <option value="pink">Pink</option>
+            </select>
+        </div>
+        <h1>My Already-Done List</h1>
+        <ul id="theList" class="yoyo">
+            <div class="vertline"></div>
+            <li class="headingLi">
+                <p>Task:</p>
+                <p>Time:</p>
+                <p>Done</p>
+                <p>Delete</p>
+            </li>
+            <!-- <li><span>opvask</span><span>20 min</span><input id="${inputValue}" type="checkbox">
+                <div class="deleteMe"></div>
+            </li>
+            <li><span>tømme vaskemaskine</span><span>20 min</span><input id="${inputValue}" type="checkbox">
+                <div class="deleteMe"></div>
+            </li> -->
+            <form id="inputForm" class="" action="">
+                <!-- <label for="task">To-Do</label> -->
+                <input id="newTask" name="task" type="text" placeholder="I.e. do the laundry..">
+                <!-- <label for="tasktime">Duration</label> -->
+                <input id="newTaskTime" name="tasktime" type="number" placeholder="minutes..">
+                <input id="addButton" type="submit" value="Add Task">
+            </form>
+            <dialog id="tooMany" closed>
+                <p>Complete some tasks first!</p>
+                <form method="dialog">
+                    <button>OK</button>
+                </form>
+            </dialog>
+        </ul>
+        <ul id="doneList" class="yoyo">
+            <div class="vertline"></div>
+            <dialog id="deletePlease" closed>
+                <p>Delete some tasks first!</p>
+                <form method="dialog">
+                    <button>OK</button>
+                </form>
+            </dialog>
+        </ul>
+    </main>
+
+
+    <!-- <ul id="theList">
+
+    </ul> -->
+    <!-- <form id="inputForm" action="">
         <label for="task">To-Do</label>
         <input id="newTask" name="task" type="text" placeholder="new task..">
+        <label for="tasktime">Duration</label>
+        <input id="newTaskTime" name="tasktime" type="text" placeholder="task duration..">
         <input id="addButton" type="submit" value="Add Task">
-        <!-- <button id="addButton">Add task</button> -->
-    </form>
-    <ul id="doneList">
+    </form> -->
+    <!-- <ul id="doneList">
         <li>test</li>
-    </ul>
+    </ul> -->
     <!-- <label for="time">Minutes</label>
     <input name="time" type="number" placeholder="i.e. 20 minutes."> -->
 
