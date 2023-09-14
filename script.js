@@ -1,6 +1,5 @@
 window.addEventListener("load", localStor);
 document.addEventListener("DOMContentLoaded", function () {
-  const inputForm = document.querySelector("#inputForm");
   const inputBtn = document.querySelector("#addButton");
   const taskObject = {
     taskName: "",
@@ -38,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // if (theList.children.length >= 14) {
     //   form.classList.add("hidden");
     // }
-    // push the object to the array
     if (document.querySelector("#theList").children.length >= 4) {
       document.querySelector("#newTask").placeholder = "New task here..";
     }
 
+    // push the object to the array
     if (task.taskName.length && theList.children.length <= 14) {
       taskArr.push(task);
       console.log(taskArr);
@@ -136,38 +135,38 @@ function localStor() {
 }
 
 // *********** det der virkede **********
-//   function generateTask(event) {
-//     const inputValue = document.querySelector("#newTask").value;
-//     event.preventDefault();
-//     console.log(event);
-//     console.log("***", inputValue);
-//     document.querySelector("p").textContent = "yo";
-//     // generate a fixed task innerHTML?
-//     const li = document.createElement("li");
-//     //   make the task dynamic
-//     li.innerHTML = `<span>${inputValue}</span><input id="${inputValue}" type="checkbox"><div class="deleteMe"></div>`;
-//     //   append to the list
-//     document.querySelector("#theList").appendChild(li);
-//     // save the task in localstorage
-//     localStorage.setItem("firstTask", inputValue);
-//     document.querySelector("#newTask").value = "";
-//     // move the task to different list
-//     document.querySelector(`#${inputValue}`).addEventListener("change", (event) => {
-//       if (event.target.checked) {
-//         document.querySelector("#doneList").appendChild(li);
-//       } else {
-//         document.querySelector("#theList").appendChild(li);
-//       }
-//       // console.log(event.target);
+// function generateTask(event) {
+//   const inputValue = document.querySelector("#newTask").value;
+//   event.preventDefault();
+//   console.log(event);
+//   console.log("***", inputValue);
+//   document.querySelector("p").textContent = "yo";
+//   // generate a fixed task innerHTML?
+//   const li = document.createElement("li");
+//   //   make the task dynamic
+//   li.innerHTML = `<span>${inputValue}</span><input id="${inputValue}" type="checkbox"><div class="deleteMe"></div>`;
+//   //   append to the list
+//   document.querySelector("#theList").appendChild(li);
+//   // save the task in localstorage
+//   localStorage.setItem("firstTask", inputValue);
+//   document.querySelector("#newTask").value = "";
+//   // move the task to different list
+//   document.querySelector(`#${inputValue}`).addEventListener("change", (event) => {
+//     if (event.target.checked) {
+//       document.querySelector("#doneList").appendChild(li);
+//     } else {
+//       document.querySelector("#theList").appendChild(li);
+//     }
+//     // console.log(event.target);
+//   });
+//   // delete tasks by clicking on the "X"
+//   document.querySelectorAll(".deleteMe").forEach((element) => {
+//     element.addEventListener("click", (event) => {
+//       // console.log(event);
+//       li.remove();
 //     });
-//     // delete tasks by clicking on the "X"
-//     document.querySelectorAll(".deleteMe").forEach((element) => {
-//       element.addEventListener("click", (event) => {
-//         // console.log(event);
-//         li.remove();
-//       });
-//     });
-//   }
+//   });
+// }
 // });
 
 // document.addEventListener("DOMContentLoaded", function () {
