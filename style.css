@@ -150,11 +150,13 @@ input[type="checkbox"] {
   border-radius: 3px;
   margin-bottom: 2px;
   font-weight: 600;
+  cursor: pointer;
   /* background-color: color-mix(in srgb, color percentage, color percentage); */
 }
 
 .deleteMe {
   justify-self: center;
+  cursor: pointer;
   /* align-self: center; */
   width: 16px;
   height: 16px;
